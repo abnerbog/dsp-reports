@@ -84,6 +84,9 @@ async def build_report(request: Request):
 
     urls = []
     for row in json_response:
+        document = await db[get_settings().mongo_database]["Submission"].find_one({"url": row["url"]})
+        if document:
+            row['submitted'] = document['submitted']
         row['provider'] = row['provider']['name']
         if 'funding' in row:
             funding_ids = []

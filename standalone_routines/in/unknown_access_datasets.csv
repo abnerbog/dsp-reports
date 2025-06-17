@@ -1,0 +1,13 @@
+url,provider,clusters,access
+https://doi.org/10.7914/SN/9D_2021,IRIS Data Management Center,Drylands Cluster,PUBLISHED
+https://ameriflux.lbl.gov/sites/siteinfo/US-Jo3#overview,AmeriFlux,Drylands Cluster,PUBLISHED
+https://doi.org/10.6073/pasta/942a5a981e6e986c5fa1a9a9cd2eb8b7,EDI Data Portal,Coastal Cluster,PUBLISHED
+https://figshare.com/articles/dataset/CZNCoastal_SoilCoreData_xlsx/22780112,figshare,Coastal Cluster,PUBLIC
+https://doi.org/10.6073/pasta/09605b9c54b3fb809f78043f7872fe00,EDI Data Portal,Coastal Cluster,PUBLISHED
+https://doi.org/10.6073/pasta/9085a63e6ff1e310f13784b6fa0f8616,Environmental Data Initiative,Drylands Cluster,PUBLISHED
+https://zenodo.org/records/10583216,Zenodo,Big Data Cluster,PUBLIC
+https://zenodo.org/records/10116443,Zenodo,Dust^2 Cluster,PUBLIC
+https://zenodo.org/records/14795962,Zenodo,Dust^2 Cluster,PUBLIC
+https://phenocam.nau.edu/webcam/sites/czdrylandpecan/,The Phenocam Network,Drylands Cluster,PUBLIC
+https://phenocam.nau.edu/webcam/sites/czdryredlake/,The Phenocam Network at NAU,Drylands Cluster,PUBLIC
+https://zenodo.org/records/14553407,Zenodo,Dust^2 Cluster,PUBLIC

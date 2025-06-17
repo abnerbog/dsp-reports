@@ -79,7 +79,7 @@ report_summary <- tibble(
     "Number of non-private datasets in other repositories"
   ),
   Count = c(
-    nrow(cznet_datasets_reporting_df),
+    nrow(cznet_datasets_reporting_df %>% filter(access!=FALSE)),
     nrow(filter(cznet_datasets_reporting_df, access == FALSE)),
     nrow(filter(cznet_datasets_reporting_df, access == "DISCOVERABLE")),
     nrow(filter(cznet_datasets_reporting_df, access == "PUBLIC")),

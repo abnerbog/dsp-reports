@@ -73,18 +73,18 @@ report_summary <- tibble(
     "Number of private datasets",
     "Number of discoverable datasets",
     "Number of public datasets",
-    "Number of datasets in EarthChem",
-    "Number of datasets in HydroShare",
-    "Number of datasets in other repositories"
+    "Number of non-private datasets in EarthChem",
+    "Number of non-private datasets in HydroShare",
+    "Number of non-private datasets in other repositories"
   ),
   Count = c(
     nrow(cznet_datasets_reporting_df),
     nrow(filter(cznet_datasets_reporting_df, access == FALSE)),
     nrow(filter(cznet_datasets_reporting_df, access == "DISCOVERABLE")),
     nrow(filter(cznet_datasets_reporting_df, access == "PUBLIC")),
-    nrow(filter(cznet_datasets_reporting_df, str_detect(provider, regex("earthchem", ignore_case = TRUE)))),
-    nrow(filter(cznet_datasets_reporting_df, str_detect(provider, regex("hydroshare", ignore_case = TRUE)))),
-    nrow(filter(cznet_datasets_reporting_df, !str_detect(provider, regex("earthchem|hydroshare", ignore_case = TRUE))))
+    nrow(filter(cznet_datasets_reporting_df %>% filter(access!=FALSE), str_detect(provider, regex("earthchem", ignore_case = TRUE)))),
+    nrow(filter(cznet_datasets_reporting_df %>% filter(access!=FALSE), str_detect(provider, regex("hydroshare", ignore_case = TRUE)))),
+    nrow(filter(cznet_datasets_reporting_df %>% filter(access!=FALSE), !str_detect(provider, regex("earthchem|hydroshare", ignore_case = TRUE))))
   )
 )
 

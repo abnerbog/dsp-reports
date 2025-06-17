@@ -73,6 +73,7 @@ report_summary <- tibble(
     "Number of private datasets",
     "Number of discoverable datasets",
     "Number of public datasets",
+    "Number of published datasets",
     "Number of non-private datasets in EarthChem",
     "Number of non-private datasets in HydroShare",
     "Number of non-private datasets in other repositories"
@@ -82,6 +83,7 @@ report_summary <- tibble(
     nrow(filter(cznet_datasets_reporting_df, access == FALSE)),
     nrow(filter(cznet_datasets_reporting_df, access == "DISCOVERABLE")),
     nrow(filter(cznet_datasets_reporting_df, access == "PUBLIC")),
+    nrow(filter(cznet_datasets_reporting_df, access == "PUBLISHED")),
     nrow(filter(cznet_datasets_reporting_df %>% filter(access!=FALSE), str_detect(provider, regex("earthchem", ignore_case = TRUE)))),
     nrow(filter(cznet_datasets_reporting_df %>% filter(access!=FALSE), str_detect(provider, regex("hydroshare", ignore_case = TRUE)))),
     nrow(filter(cznet_datasets_reporting_df %>% filter(access!=FALSE), !str_detect(provider, regex("earthchem|hydroshare", ignore_case = TRUE))))

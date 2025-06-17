@@ -1,2 +1,4 @@
 __pycache__/
 .env
+.Rproj.user
+standalone_routines/in/jenkins_submission_report.csv
